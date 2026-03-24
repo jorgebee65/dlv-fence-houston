@@ -1,13 +1,22 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Bebas_Neue, Manrope } from 'next/font/google';
 import './globals.css';
 import Navbar from '../components/Navbar';
 
-const inter = Inter({ subsets: ['latin'] });
+const bebas = Bebas_Neue({ 
+  weight: '400', 
+  subsets: ['latin'], 
+  variable: '--font-bebas' 
+});
+
+const manrope = Manrope({ 
+  subsets: ['latin'], 
+  variable: '--font-manrope' 
+});
 
 export const metadata: Metadata = {
-  title: 'DLV Fence & Gate Masters LLC | Houston, TX',
-  description: 'Expert Fence & Gate Solutions in Houston, TX. Iron, Aluminum, Sheet Metal, Chainlink, and Custom Fabrication.',
+  title: 'DLV FENCE & GATE | Industrial Grade Fabrication | Houston',
+  description: 'Heavy duty custom iron, corrugated metal, and security gates. Houston-based structural fabrication.',
 };
 
 export default function RootLayout({
@@ -17,7 +26,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${inter.className} bg-slate-950 text-slate-50 antialiased selection:bg-amber-500 selection:text-slate-950`}>
+      <body className={`${bebas.variable} ${manrope.variable} bg-brand-black text-white antialiased selection:bg-brand-orange selection:text-brand-black`}>
+        <div className="noise-overlay"></div>
+        <div className="bg-blueprint fixed inset-0 -z-50 pointer-events-none"></div>
         <Navbar />
         {children}
       </body>

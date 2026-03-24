@@ -4,29 +4,30 @@ import { useState, useMemo, useEffect } from 'react';
 import Image from 'next/image';
 import inventoryData from '../data/inventory.json';
 
-const TABS = ["All", "Iron", "Aluminum", "Sheet Metal", "Chainlink", "Custom"];
+const TABS = ["ALL", "GATES", "FENCES", "CORRUGATED", "CUSTOM ART", "WOOD"];
 
 export default function WorkGallery() {
-  const [activeTab, setActiveTab] = useState("All");
+  const [activeTab, setActiveTab] = useState("ALL");
   const [isAnimating, setIsAnimating] = useState(false);
   const [displayData, setDisplayData] = useState(inventoryData);
 
   const filteredItems = useMemo(() => {
     return inventoryData.filter((item) => {
-      if (activeTab === "All") return true;
+      if (activeTab === "ALL") return true;
       const mat = (item.material || "").toLowerCase();
+      const cat = (item.categoria || "").toLowerCase();
       
       switch (activeTab) {
-        case "Iron":
-          return mat.includes("iron");
-        case "Aluminum":
-          return mat.includes("alumin");
-        case "Sheet Metal":
-          return mat.includes("corrugated") || mat.includes("sheet");
-        case "Chainlink":
-          return mat.includes("chain");
-        case "Custom":
-          return mat.includes("custom") || mat.includes("wood"); // Grouping wood into custom
+        case "GATES":
+          return cat.includes("gate");
+        case "FENCES":
+          return cat.includes("fence");
+        case "CORRUGATED":
+          return mat.includes("corrugated");
+        case "CUSTOM ART":
+          return mat.includes("custom") || mat.includes("laser");
+        case "WOOD":
+          return mat.includes("wood");
         default:
           return true;
       }
@@ -40,36 +41,35 @@ export default function WorkGallery() {
       setActiveTab(tab);
       setDisplayData(filteredItems);
       setIsAnimating(false);
-    }, 300); // 300ms fade transition
+    }, 200);
   };
 
-  // Ensure data updates on first tab switch
   useEffect(() => {
     setDisplayData(filteredItems);
   }, [filteredItems]);
 
   return (
-    <section id="gallery" className="py-24 bg-slate-950 border-t border-slate-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tight">
-            Our <span className="text-amber-500">Portfolio</span>
+    <section id="gallery" className="py-24 bg-brand-black relative">
+      <div className="px-4 sm:px-8 max-w-[1600px] mx-auto relative z-10">
+        <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+          <h2 className="font-display text-5xl md:text-8xl text-white uppercase tracking-tighter leading-none m-0">
+            THE <span className="text-brand-orange">ARCHIVE</span>
           </h2>
-          <p className="mt-4 text-slate-400 text-lg">
-            Heavy duty fabrication for Houston&apos;s toughest environments.
+          <p className="font-body text-brand-gray font-bold uppercase tracking-widest text-sm max-w-sm text-right">
+            Heavy duty fabrication for Houston&apos;s toughest environments. Filter by specification.
           </p>
         </div>
 
-        {/* Tabs */}
-        <div className="flex flex-wrap justify-center gap-3 mb-12">
+        {/* Brutalist Filters */}
+        <div className="flex flex-wrap gap-2 md:gap-4 mb-16">
           {TABS.map((tab) => (
             <button
               key={tab}
               onClick={() => handleTabChange(tab)}
-              className={`px-6 py-2.5 rounded-full text-sm font-bold transition-all duration-300 ${
+              className={`font-display text-xl md:text-3xl px-6 py-2 uppercase transition-all duration-0 border-2 ${
                 activeTab === tab
-                  ? "bg-amber-500 text-slate-950 shadow-[0_0_15px_rgba(245,158,11,0.4)]"
-                  : "bg-slate-900 text-slate-400 hover:bg-slate-800 hover:text-white border border-slate-800"
+                  ? "bg-brand-orange text-brand-black border-brand-orange"
+                  : "bg-transparent text-brand-gray border-brand-steel hover:border-brand-orange hover:text-brand-orange"
               }`}
             >
               {tab}
@@ -77,20 +77,20 @@ export default function WorkGallery() {
           ))}
         </div>
 
-        {/* Gallery Grid */}
+        {/* Masonry / Grid */}
         <div
-          className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 transition-opacity duration-300 ${
+          className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 transition-opacity duration-200 ${
             isAnimating ? "opacity-0" : "opacity-100"
           }`}
         >
           {displayData.map((item, idx) => {
             const isVideo = item.archivo.endsWith('.mp4');
-            const materialShort = item.material.split('/')[0].trim();
+            const materialShort = item.material.split('/')[0].trim().toUpperCase();
 
             return (
               <div
                 key={item.archivo + idx}
-                className="group relative aspect-[4/3] rounded-xl overflow-hidden bg-slate-900 border border-slate-800 shadow-lg hover:shadow-amber-500/20 transition-all duration-500"
+                className="group relative aspect-[4/5] bg-brand-steel overflow-hidden border-4 border-transparent hover:border-brand-orange transition-all duration-0"
               >
                 {isVideo ? (
                   <video
@@ -99,7 +99,7 @@ export default function WorkGallery() {
                     loop
                     muted
                     playsInline
-                    className="object-cover w-full h-full opacity-70 group-hover:opacity-100 transition-opacity duration-500"
+                    className="object-cover w-full h-full filter grayscale contrast-125 group-hover:grayscale-0 transition-all duration-500"
                   />
                 ) : (
                   <Image
@@ -107,19 +107,22 @@ export default function WorkGallery() {
                     alt={item.notas || `${item.categoria} - ${item.material}`}
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    className="object-cover opacity-70 group-hover:opacity-100 transition-transform duration-700 group-hover:scale-105"
+                    className="object-cover filter grayscale contrast-125 group-hover:grayscale-0 transition-all duration-500"
                     loading="lazy"
                   />
                 )}
 
-                {/* Hover Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5">
-                  <span className="text-amber-500 font-black text-xs tracking-widest uppercase mb-1 drop-shadow-md">
-                    {item.categoria}
+                {/* Industrial Hover Block */}
+                <div className="absolute bottom-0 left-0 w-full bg-brand-orange text-brand-black p-6 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out flex flex-col justify-end">
+                  <span className="font-body font-bold text-xs tracking-widest uppercase mb-2 text-black/60">
+                    ID: {item.archivo.slice(0, 10)}
                   </span>
-                  <h3 className="text-white font-bold text-lg leading-tight drop-shadow-md">
-                    {materialShort}
+                  <h3 className="font-display text-4xl leading-none m-0">
+                    {item.categoria.toUpperCase()}
                   </h3>
+                  <p className="font-display text-2xl m-0 text-black/80 mt-1">
+                    {materialShort}
+                  </p>
                 </div>
               </div>
             );
@@ -127,8 +130,8 @@ export default function WorkGallery() {
         </div>
 
         {displayData.length === 0 && !isAnimating && (
-          <div className="text-center py-20">
-            <p className="text-slate-500 text-lg">No projects found in this category yet.</p>
+          <div className="border-4 border-brand-orange p-12 text-center mt-12 bg-brand-steel/10">
+            <p className="font-display text-4xl text-brand-orange uppercase">NO ASSETS MATCH CURRENT FILTERS.</p>
           </div>
         )}
       </div>

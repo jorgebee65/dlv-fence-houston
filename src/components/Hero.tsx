@@ -2,25 +2,56 @@ import { siteConfig } from '../data/site-config';
 
 export default function Hero() {
   return (
-    <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-        <h1 className="text-5xl md:text-7xl font-black text-white tracking-tight mb-6 uppercase">
-          Expert Fence & Gate <br className="hidden md:block" />
-          <span className="text-amber-500">Solutions in Houston, TX</span>
-        </h1>
-        <p className="mt-4 text-xl text-slate-400 max-w-3xl mx-auto mb-10">
-          From custom wrought iron to high-privacy corrugated metal. We build durable, secure, and stunning perimeters for residential and commercial properties.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href={siteConfig.whatsapp} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-slate-950 bg-amber-500 rounded-md hover:bg-amber-400 transition-all hover:scale-105 shadow-[0_0_20px_rgba(245,158,11,0.4)]">
-            Get a Free Quote
-          </a>
-          <a href="#services" className="inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white bg-transparent border-2 border-slate-700 rounded-md hover:border-slate-500 hover:bg-slate-800 transition-all">
-            View Our Services
-          </a>
+    <section className="relative min-h-[90vh] flex flex-col justify-center overflow-hidden border-b-4 border-brand-orange">
+      <div className="px-4 sm:px-8 mt-24 md:mt-0 relative z-10">
+        <div className="max-w-screen-2xl">
+          <p className="font-body text-brand-orange font-bold tracking-widest uppercase mb-4 md:mb-8 text-sm md:text-lg reveal-1">
+            &frasl;&frasl;&frasl; Structural Integrity &amp; Design
+          </p>
+          <h1 className="font-display text-7xl sm:text-8xl md:text-[10rem] lg:text-[12rem] leading-[0.8] tracking-tight text-white mb-6 md:mb-10 reveal-2 mix-blend-exclusion">
+            WE <span className="text-brand-orange">FORGE</span>
+            <br /> 
+            HOUSTON
+          </h1>
+          
+          <div className="flex flex-col md:flex-row gap-8 md:items-end justify-between reveal-3">
+            <p className="font-body text-brand-gray text-lg md:text-2xl max-w-xl font-medium leading-relaxed">
+              Industrial grade gates, custom metal art, and heavy-duty privacy perimeters built to outlast the Texas elements.
+            </p>
+            
+            <a 
+              href={siteConfig.whatsapp} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="inline-flex items-center justify-center border-2 border-brand-orange text-brand-orange hover:bg-brand-orange hover:text-brand-black font-display text-3xl px-10 py-5 transition-colors duration-0 w-max"
+            >
+              Get a Quote &rarr;
+            </a>
+          </div>
         </div>
       </div>
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-amber-500/5 rounded-full blur-3xl -z-10"></div>
+
+      {/* Marquee Banner */}
+      <div className="absolute bottom-0 w-full bg-brand-orange py-3 overflow-hidden border-t-2 border-black z-20">
+        <div className="flex whitespace-nowrap font-display text-4xl text-brand-black uppercase">
+          <div className="animate-marquee inline-flex gap-8 px-4">
+            <span>CUSTOM METAL ART</span> <span className="text-white">+++</span>
+            <span>WROUGHT IRON GATES</span> <span className="text-white">+++</span>
+            <span>CORRUGATED FENCES</span> <span className="text-white">+++</span>
+            <span>SLIDING SYSTEMS</span> <span className="text-white">+++</span>
+            <span>ALUMINUM</span> <span className="text-white">+++</span>
+            <span>STRUCTURAL FABRICATION</span> <span className="text-white">+++</span>
+          </div>
+          <div className="animate-marquee inline-flex gap-8 px-4" aria-hidden="true">
+            <span>CUSTOM METAL ART</span> <span className="text-white">+++</span>
+            <span>WROUGHT IRON GATES</span> <span className="text-white">+++</span>
+            <span>CORRUGATED FENCES</span> <span className="text-white">+++</span>
+            <span>SLIDING SYSTEMS</span> <span className="text-white">+++</span>
+            <span>ALUMINUM</span> <span className="text-white">+++</span>
+            <span>STRUCTURAL FABRICATION</span> <span className="text-white">+++</span>
+          </div>
+        </div>
+      </div>
     </section>
   );
 }
