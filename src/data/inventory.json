@@ -622,5 +622,45 @@
     "estilo": "Residencial, gran lujo",
     "notas": "Port\u00f3n masivo con monograma central 'Z', detalles en plata/cromo y ornamentaci\u00f3n superior.",
     "ubicacion": "Houston, TX"
+  },
+  {
+    "archivo": "gate_texas_star_slider_01.webp",
+    "categoria": "Gate",
+    "material": "Wrought Iron / Hierro Forjado",
+    "estilo": "Residencial, logo Texas Star",
+    "notas": "Port\u00f3n deslizante masivo de hierro negro con el escudo de la estrella de Texas en el centro.",
+    "ubicacion": "Houston, TX"
+  },
+  {
+    "archivo": "fence_stepped_iron_01.webp",
+    "categoria": "Fence",
+    "material": "Wrought Iron / Hierro Forjado",
+    "estilo": "Residencial, terreno inclinado",
+    "notas": "Barda de hierro negro instalada de forma escalonada (stepped) para adaptarse a la pendiente del terreno.",
+    "ubicacion": "Houston, TX"
+  },
+  {
+    "archivo": "gate_wood_arched_monogram_01.webp",
+    "categoria": "Gate",
+    "material": "Wood & Iron / Madera y Hierro",
+    "estilo": "Residencial, arco ornamentado",
+    "notas": "Port\u00f3n de madera de cedro con marco de hierro forjado, arco superior con espirales y monograma central.",
+    "ubicacion": "Houston, TX"
+  },
+  {
+    "archivo": "gate_mishad_ranch_sunset_01.webp",
+    "categoria": "Gate",
+    "material": "Wrought Iron / Custom Art",
+    "estilo": "Rancho, paisaje atardecer",
+    "notas": "Gran arco de entrada 'MISHAD RANCH' con port\u00f3n de hierro forjado bajo un cielo de atardecer.",
+    "ubicacion": "Houston, TX"
+  },
+  {
+    "archivo": "fence_spear_top_residential_01.webp",
+    "categoria": "Fence",
+    "material": "Wrought Iron / Hierro Forjado",
+    "estilo": "Residencial, alta seguridad",
+    "notas": "Cerca perimetral de hierro negro con puntas de lanza (spear tops) rodeando una propiedad con \u00e1rboles.",
+    "ubicacion": "Houston, TX"
   }
 ]
