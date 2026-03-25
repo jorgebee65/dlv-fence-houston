@@ -15,8 +15,30 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: 'DLV GATE MASTERS | Industrial Grade Fabrication | Houston',
-  description: 'Houston’s premier metal experts for industrial-grade gates, custom art, and heavy-duty privacy. Professional repairs and custom fabrication.',
+  title: 'DLV Gate Masters | Custom Gates & Professional Fences in Houston',
+  description: 'Expert fabrication, professional installation, and reliable repairs in Houston. Specializing in LiftMaster™ automated systems, custom metal art, and heavy-duty privacy solutions built to last.',
+  openGraph: {
+    title: 'DLV Gate Masters | Custom Gates & Professional Fences in Houston',
+    description: 'Expert fabrication, professional installation, and reliable repairs in Houston. Specializing in LiftMaster™ automated systems, custom metal art, and heavy-duty privacy solutions built to last.',
+    url: 'https://dlv-gate-masters.com',
+    siteName: 'DLV Gate Masters',
+    images: [
+      {
+        url: '/og-image.webp',
+        width: 1200,
+        height: 630,
+        alt: 'DLV Gate Masters | Custom Gates & Perimeter Security',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'DLV Gate Masters | Custom Gates & Professional Fences in Houston',
+    description: 'Expert fabrication, professional installation, and reliable repairs in Houston.',
+    images: ['/og-image.webp'],
+  },
 };
 
 export default function RootLayout({
