@@ -5,19 +5,19 @@ const SERVICES = [
     id: "iron",
     title: "Iron & Wrought Iron",
     desc: "Extreme durability, perimeter security, and classic hand-forged elegance for luxury estates.",
-    icon: "/icons/iron.svg"
+    icon: "/icons/iron.webp"
   },
   {
     id: "aluminum",
     title: "Aluminum",
     desc: "Maintenance-free, lightweight, and corrosion-resistant solutions for modern residential fencing.",
-    icon: "/icons/aluminum.svg"
+    icon: "/icons/aluminum.webp"
   },
   {
     id: "sheet-metal",
     title: "Sheet Metal & Corrugated",
     desc: "Total privacy and a bold modern/industrial aesthetic for contemporary properties.",
-    icon: "/icons/sheet-metal.svg"
+    icon: "/icons/sheet-metal.webp"
   },
   {
     id: "chainlink",
@@ -35,7 +35,7 @@ const SERVICES = [
     id: "automated",
     title: "Automated Systems",
     desc: "Smart access solutions including sliding and swinging gates for high security and daily convenience.",
-    icon: "/icons/automated.svg"
+    icon: "/icons/automated.webp"
   }
 ];
 
