@@ -23,13 +23,13 @@ const SERVICES = [
     id: "chainlink",
     title: "Chainlink",
     desc: "Functional, cost-effective, and clear delimitation for commercial and industrial perimeters.",
-    icon: "/icons/chainlink.svg"
+    icon: "/icons/chainlink.webp"
   },
   {
     id: "custom-art",
     title: "Custom Metal Art",
     desc: "Unique plasma-cut designs, logos, and signature pieces crafted for specialized architectural projects.",
-    icon: "/icons/custom-art.svg"
+    icon: "/icons/custom-art.webp"
   },
   {
     id: "automated",
