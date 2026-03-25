@@ -6,8 +6,8 @@ export default function Navbar() {
       <div className="px-4 sm:px-8">
         <div className="flex justify-between items-center h-14 md:h-20">
           <div className="flex-shrink-0">
-            <span className="font-display text-2xl md:text-5xl tracking-normal text-white">
-              DLV <span className="text-brand-copper">MASTERS</span>
+            <span className="font-display text-2xl md:text-5xl tracking-normal text-white uppercase">
+              DLV GATE <span className="text-brand-copper">MASTERS</span>
             </span>
           </div>
           <div className="flex items-center gap-4">
