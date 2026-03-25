@@ -10,9 +10,17 @@ export default function Navbar() {
               DLV <span className="text-brand-copper">MASTERS</span>
             </span>
           </div>
-          <div>
+          <div className="flex items-center gap-4">
+            <div className="hidden sm:flex flex-col items-end mr-4">
+              <a href={`tel:${siteConfig.phones.english.value}`} className="font-display text-lg text-white hover:text-brand-amber leading-none mb-1">
+                {siteConfig.phones.english.label} (EN)
+              </a>
+              <a href={`tel:${siteConfig.phones.spanish.value}`} className="font-display text-lg text-white hover:text-brand-amber leading-none">
+                {siteConfig.phones.spanish.label} (ES)
+              </a>
+            </div>
             <a 
-              href={siteConfig.whatsapp} 
+              href={siteConfig.phones.spanish.whatsapp} 
               target="_blank" 
               rel="noopener noreferrer" 
               className="font-display text-base md:text-2xl px-4 py-1.5 md:px-6 md:py-2 bg-brand-amber text-brand-black uppercase leading-none hover:bg-white hover:text-brand-black transition-colors duration-0"
