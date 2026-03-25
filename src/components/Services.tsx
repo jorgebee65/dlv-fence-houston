@@ -33,8 +33,8 @@ const SERVICES = [
   },
   {
     id: "automated",
-    title: "Automated Systems",
-    desc: "Smart access solutions including sliding and swinging gates for high security and daily convenience.",
+    title: "Premier LiftMaster™ Automation",
+    desc: "We specialize in the professional installation of LiftMaster™ residential and commercial operators.",
     image: "/icons/automated.webp"
   }
 ];
