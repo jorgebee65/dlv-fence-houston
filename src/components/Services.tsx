@@ -8,9 +8,9 @@ export default function Services() {
   ];
 
   return (
-    <section id="services" className="py-24 border-b-4 border-brand-steel relative bg-brand-black">
+    <section id="services" className="py-16 md:py-24 border-b-4 border-brand-steel relative bg-brand-black">
       <div className="px-4 sm:px-8 max-w-screen-2xl mx-auto relative z-10">
-        <h2 className="font-display text-5xl md:text-8xl text-brand-steel uppercase tracking-tighter mb-12 mix-blend-difference">
+        <h2 className="font-display text-4xl sm:text-6xl md:text-8xl text-brand-steel uppercase tracking-tighter mb-8 md:mb-12 mix-blend-difference">
           Our Capabilities
         </h2>
         
@@ -18,17 +18,17 @@ export default function Services() {
           {services.map((service, i) => (
             <div 
               key={service.title} 
-              className="group flex flex-col md:flex-row justify-between items-start md:items-center py-10 md:py-16 border-b-2 border-brand-steel hover:bg-brand-orange hover:px-6 transition-all duration-300"
+              className="group flex flex-col md:flex-row justify-between items-start md:items-center py-8 md:py-16 border-b-2 border-brand-steel hover:bg-brand-orange hover:px-2 md:hover:px-6 transition-all duration-300"
             >
-              <div className="flex gap-6 items-baseline mb-4 md:mb-0">
-                <span className="font-display text-2xl md:text-4xl text-brand-gray group-hover:text-black">
+              <div className="flex gap-4 md:gap-6 items-baseline mb-2 md:mb-0">
+                <span className="font-display text-xl md:text-4xl text-brand-gray group-hover:text-black">
                   0{i + 1}
                 </span>
-                <h3 className="font-display text-4xl md:text-7xl text-white group-hover:text-black m-0 uppercase leading-none">
+                <h3 className="font-display text-3xl sm:text-5xl md:text-7xl text-white group-hover:text-black m-0 uppercase leading-none">
                   {service.title}
                 </h3>
               </div>
-              <p className="font-body text-lg md:text-xl text-brand-gray group-hover:text-brand-black font-semibold max-w-sm text-left md:text-right">
+              <p className="font-body text-sm md:text-xl text-brand-gray group-hover:text-brand-black font-semibold max-w-sm text-left md:text-right mt-2 md:mt-0">
                 {service.desc}
               </p>
             </div>

@@ -49,24 +49,24 @@ export default function WorkGallery() {
   }, [filteredItems]);
 
   return (
-    <section id="gallery" className="py-24 bg-brand-black relative">
+    <section id="gallery" className="py-16 md:py-24 bg-brand-black relative overflow-hidden">
       <div className="px-4 sm:px-8 max-w-[1600px] mx-auto relative z-10">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
-          <h2 className="font-display text-5xl md:text-8xl text-white uppercase tracking-tighter leading-none m-0">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 md:mb-16 gap-4 md:gap-8">
+          <h2 className="font-display text-4xl sm:text-6xl md:text-8xl text-white uppercase tracking-tighter leading-none m-0">
             THE <span className="text-brand-orange">ARCHIVE</span>
           </h2>
-          <p className="font-body text-brand-gray font-bold uppercase tracking-widest text-sm max-w-sm text-right">
+          <p className="font-body text-brand-gray font-bold uppercase tracking-widest text-xs md:text-sm max-w-sm text-left md:text-right">
             Heavy duty fabrication for Houston&apos;s toughest environments. Filter by specification.
           </p>
         </div>
 
         {/* Brutalist Filters */}
-        <div className="flex flex-wrap gap-2 md:gap-4 mb-16">
+        <div className="flex flex-wrap gap-2 md:gap-4 mb-10 md:mb-16">
           {TABS.map((tab) => (
             <button
               key={tab}
               onClick={() => handleTabChange(tab)}
-              className={`font-display text-xl md:text-3xl px-6 py-2 uppercase transition-all duration-0 border-2 ${
+              className={`font-display text-base md:text-3xl px-4 py-1.5 md:px-6 md:py-2 uppercase transition-all duration-0 border-2 flex-grow sm:flex-grow-0 text-center ${
                 activeTab === tab
                   ? "bg-brand-orange text-brand-black border-brand-orange"
                   : "bg-transparent text-brand-gray border-brand-steel hover:border-brand-orange hover:text-brand-orange"
@@ -90,7 +90,7 @@ export default function WorkGallery() {
             return (
               <div
                 key={item.archivo + idx}
-                className="group relative aspect-[4/5] bg-brand-steel overflow-hidden border-4 border-transparent hover:border-brand-orange transition-all duration-0"
+                className="group relative aspect-[4/5] sm:aspect-square md:aspect-[4/5] bg-brand-steel overflow-hidden border-2 md:border-4 border-transparent hover:border-brand-orange transition-all duration-0"
               >
                 {isVideo ? (
                   <video
@@ -99,7 +99,7 @@ export default function WorkGallery() {
                     loop
                     muted
                     playsInline
-                    className="object-cover w-full h-full filter grayscale contrast-125 group-hover:grayscale-0 transition-all duration-500"
+                    className="object-cover w-full h-full filter grayscale-0 md:grayscale md:contrast-125 md:group-hover:grayscale-0 transition-all duration-500"
                   />
                 ) : (
                   <Image
@@ -107,20 +107,20 @@ export default function WorkGallery() {
                     alt={item.notas || `${item.categoria} - ${item.material}`}
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    className="object-cover filter grayscale contrast-125 group-hover:grayscale-0 transition-all duration-500"
+                    className="object-cover filter grayscale-0 md:grayscale md:contrast-125 md:group-hover:grayscale-0 transition-all duration-500"
                     loading="lazy"
                   />
                 )}
 
-                {/* Industrial Hover Block */}
-                <div className="absolute bottom-0 left-0 w-full bg-brand-orange text-brand-black p-6 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out flex flex-col justify-end">
-                  <span className="font-body font-bold text-xs tracking-widest uppercase mb-2 text-black/60">
+                {/* Industrial Hover Block - Always visible on mobile, hover on desktop */}
+                <div className="absolute bottom-0 left-0 w-full bg-brand-orange text-brand-black p-4 md:p-6 transform translate-y-0 md:translate-y-full md:group-hover:translate-y-0 transition-transform duration-300 ease-out flex flex-col justify-end">
+                  <span className="font-body font-bold text-[10px] md:text-xs tracking-widest uppercase mb-1 md:mb-2 text-black/60">
                     ID: {item.archivo.slice(0, 10)}
                   </span>
-                  <h3 className="font-display text-4xl leading-none m-0">
+                  <h3 className="font-display text-2xl md:text-4xl leading-none m-0">
                     {item.categoria.toUpperCase()}
                   </h3>
-                  <p className="font-display text-2xl m-0 text-black/80 mt-1">
+                  <p className="font-display text-lg md:text-2xl m-0 text-black/80 md:mt-1">
                     {materialShort}
                   </p>
                 </div>
@@ -130,8 +130,8 @@ export default function WorkGallery() {
         </div>
 
         {displayData.length === 0 && !isAnimating && (
-          <div className="border-4 border-brand-orange p-12 text-center mt-12 bg-brand-steel/10">
-            <p className="font-display text-4xl text-brand-orange uppercase">NO ASSETS MATCH CURRENT FILTERS.</p>
+          <div className="border-2 md:border-4 border-brand-orange p-8 md:p-12 text-center mt-8 md:mt-12 bg-brand-steel/10">
+            <p className="font-display text-2xl md:text-4xl text-brand-orange uppercase">NO ASSETS MATCH CURRENT FILTERS.</p>
           </div>
         )}
       </div>
