@@ -7,7 +7,7 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-14 md:h-20">
           <div className="flex-shrink-0">
             <span className="font-display text-2xl md:text-5xl tracking-normal text-white">
-              DLV <span className="text-brand-orange">MASTERS</span>
+              DLV <span className="text-brand-copper">MASTERS</span>
             </span>
           </div>
           <div>
@@ -15,7 +15,7 @@ export default function Navbar() {
               href={siteConfig.whatsapp} 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="font-display text-base md:text-2xl px-4 py-1.5 md:px-6 md:py-2 bg-brand-orange text-brand-black uppercase leading-none hover:bg-white hover:text-brand-black transition-colors duration-0"
+              className="font-display text-base md:text-2xl px-4 py-1.5 md:px-6 md:py-2 bg-brand-amber text-brand-black uppercase leading-none hover:bg-white hover:text-brand-black transition-colors duration-0"
             >
               Contact
             </a>
