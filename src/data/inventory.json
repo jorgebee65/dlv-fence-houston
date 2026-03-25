@@ -542,5 +542,85 @@
     "estilo": "Residencial/Finca, r\u00fastico o industrial ligero",
     "notas": "[Video] Un camar\u00f3grafo camina a lo largo de una enorme barda de metal corrugado (color caf\u00e9 claro/tan) reci\u00e9n instalada, mostrando su longitud. Hay restos de material de construcci\u00f3n en el piso.",
     "ubicacion": "Houston, TX"
+  },
+  {
+    "archivo": "gate_stone_pillars_01.webp",
+    "categoria": "Gate",
+    "material": "Wrought Iron / Hierro Forjado",
+    "estilo": "Residencial, columnas de piedra",
+    "notas": "Port\u00f3n doble de hierro negro con arco invertido, instalado entre columnas de piedra natural.",
+    "ubicacion": "Houston, TX"
+  },
+  {
+    "archivo": "gate_ornamental_bronze_01.webp",
+    "categoria": "Gate",
+    "material": "Wrought Iron / Bronze Finish",
+    "estilo": "Residencial, cl\u00e1sico premium",
+    "notas": "Port\u00f3n doble ornamentado con acabado en tono bronce/cobre, columnas blancas y faroles cl\u00e1sicos.",
+    "ubicacion": "Houston, TX"
+  },
+  {
+    "archivo": "gate_monogram_r_01.webp",
+    "categoria": "Gate",
+    "material": "Wrought Iron / Hierro Forjado",
+    "estilo": "Residencial, personalizado",
+    "notas": "Port\u00f3n con monograma central 'R' en corte l\u00e1ser, dise\u00f1o de arco cl\u00e1sico.",
+    "ubicacion": "Houston, TX"
+  },
+  {
+    "archivo": "gate_studs_custom_01.webp",
+    "categoria": "Gate",
+    "material": "Wrought Iron / Custom Studs",
+    "estilo": "Finca/Rancho, r\u00fastico industrial",
+    "notas": "Port\u00f3n con aplicaciones de estoperoles decorativos y dise\u00f1o de arco doble.",
+    "ubicacion": "Houston, TX"
+  },
+  {
+    "archivo": "gate_wood_iron_frame_01.webp",
+    "categoria": "Gate",
+    "material": "Wood & Iron / Madera y Hierro",
+    "estilo": "Residencial, privacidad total",
+    "notas": "Port\u00f3n doble de madera de cedro con marco de hierro negro, alta privacidad.",
+    "ubicacion": "Houston, TX"
+  },
+  {
+    "archivo": "gate_wood_sliding_modern_01.webp",
+    "categoria": "Gate",
+    "material": "Wood & Iron / Madera y Hierro",
+    "estilo": "Residencial, moderno deslizante",
+    "notas": "Port\u00f3n deslizante automatizado de paneles de madera horizontales y marco gris.",
+    "ubicacion": "Houston, TX"
+  },
+  {
+    "archivo": "railing_outdoor_modern_01.webp",
+    "categoria": "Railing",
+    "material": "Wrought Iron / Hierro Forjado",
+    "estilo": "Residencial, moderno horizontal",
+    "notas": "Pasamanos exterior de l\u00edneas horizontales negras para deck de madera.",
+    "ubicacion": "Houston, TX"
+  },
+  {
+    "archivo": "railing_indoor_loft_01.webp",
+    "categoria": "Railing",
+    "material": "Wrought Iron / Hierro Forjado",
+    "estilo": "Interior, industrial moderno",
+    "notas": "Barandal interior para loft con dise\u00f1o de perfiles rectangulares negros.",
+    "ubicacion": "Houston, TX"
+  },
+  {
+    "archivo": "railing_indoor_stairs_01.webp",
+    "categoria": "Railing",
+    "material": "Wrought Iron / Hierro Forjado",
+    "estilo": "Interior, moderno minimalista",
+    "notas": "Barandal de escalera interior con l\u00edneas horizontales, estilo limpio.",
+    "ubicacion": "Houston, TX"
+  },
+  {
+    "archivo": "gate_monogram_z_luxury_01.webp",
+    "categoria": "Gate",
+    "material": "Wrought Iron / Luxury Custom",
+    "estilo": "Residencial, gran lujo",
+    "notas": "Port\u00f3n masivo con monograma central 'Z', detalles en plata/cromo y ornamentaci\u00f3n superior.",
+    "ubicacion": "Houston, TX"
   }
 ]
