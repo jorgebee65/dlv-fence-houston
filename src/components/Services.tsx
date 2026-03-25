@@ -5,37 +5,37 @@ const SERVICES = [
     id: "iron",
     title: "Iron & Wrought Iron",
     desc: "Extreme durability, perimeter security, and classic hand-forged elegance for luxury estates.",
-    icon: "/icons/iron.webp"
+    image: "/icons/iron.webp"
   },
   {
     id: "aluminum",
     title: "Aluminum",
     desc: "Maintenance-free, lightweight, and corrosion-resistant solutions for modern residential fencing.",
-    icon: "/icons/aluminum.webp"
+    image: "/icons/aluminum.webp"
   },
   {
     id: "sheet-metal",
     title: "Sheet Metal & Corrugated",
     desc: "Total privacy and a bold modern/industrial aesthetic for contemporary properties.",
-    icon: "/icons/sheet-metal.webp"
+    image: "/icons/sheet-metal.webp"
   },
   {
     id: "chainlink",
     title: "Chainlink",
     desc: "Functional, cost-effective, and clear delimitation for commercial and industrial perimeters.",
-    icon: "/icons/chainlink.webp"
+    image: "/icons/chainlink.webp"
   },
   {
     id: "custom-art",
     title: "Custom Metal Art",
     desc: "Unique plasma-cut designs, logos, and signature pieces crafted for specialized architectural projects.",
-    icon: "/icons/custom-art.webp"
+    image: "/icons/custom-art.webp"
   },
   {
     id: "automated",
     title: "Automated Systems",
     desc: "Smart access solutions including sliding and swinging gates for high security and daily convenience.",
-    icon: "/icons/automated.webp"
+    image: "/icons/automated.webp"
   }
 ];
 
@@ -51,22 +51,26 @@ export default function Services() {
           {SERVICES.map((service) => (
             <div 
               key={service.id} 
-              className="group p-8 border-2 border-brand-steel bg-brand-steel/30 hover:border-brand-amber transition-all duration-300 flex flex-col items-start gap-6"
+              className="group relative h-[400px] md:h-[500px] overflow-hidden border-2 border-brand-steel transition-all duration-500 hover:border-brand-amber"
             >
-              <div className="w-16 h-16 relative grayscale group-hover:grayscale-0 transition-all duration-300">
+              {/* Background Image with Overlay */}
+              <div className="absolute inset-0 z-0">
                 <Image 
-                  src={service.icon} 
+                  src={service.image} 
                   alt={service.title} 
                   fill 
-                  className="object-contain"
+                  className="object-cover transition-transform duration-700 group-hover:scale-110 opacity-60 group-hover:opacity-80"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/40 to-transparent z-10" />
               </div>
               
-              <div className="space-y-4">
-                <h3 className="font-display text-3xl md:text-4xl text-white group-hover:text-brand-amber transition-colors duration-300 leading-tight">
+              {/* Content */}
+              <div className="absolute inset-0 z-20 p-8 flex flex-col justify-end gap-4 transform transition-transform duration-500">
+                <div className="h-1 w-12 bg-brand-amber mb-2 transition-all duration-500 group-hover:w-full" />
+                <h3 className="font-display text-3xl md:text-5xl text-white leading-none uppercase">
                   {service.title}
                 </h3>
-                <p className="font-body text-brand-gray text-base md:text-lg leading-relaxed">
+                <p className="font-body text-brand-gray text-base md:text-lg leading-snug max-w-[90%] opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0 text-white font-medium">
                   {service.desc}
                 </p>
               </div>
