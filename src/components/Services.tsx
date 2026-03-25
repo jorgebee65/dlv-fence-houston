@@ -59,18 +59,18 @@ export default function Services() {
                   src={service.image} 
                   alt={service.title} 
                   fill 
-                  className="object-cover transition-transform duration-700 group-hover:scale-110 opacity-60 group-hover:opacity-80"
+                  className="object-cover transition-transform duration-700 md:group-hover:scale-110 opacity-60 md:group-hover:opacity-80"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/40 to-transparent z-10" />
               </div>
               
               {/* Content */}
               <div className="absolute inset-0 z-20 p-8 flex flex-col justify-end gap-4 transform transition-transform duration-500">
-                <div className="h-1 w-12 bg-brand-amber mb-2 transition-all duration-500 group-hover:w-full" />
+                <div className="h-1 w-full md:w-12 bg-brand-amber mb-2 transition-all duration-500 md:group-hover:w-full" />
                 <h3 className="font-display text-3xl md:text-5xl text-white leading-none uppercase">
                   {service.title}
                 </h3>
-                <p className="font-body text-brand-gray text-base md:text-lg leading-snug max-w-[90%] opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0 text-white font-medium">
+                <p className="font-body text-brand-gray text-base md:text-lg leading-snug max-w-[90%] md:opacity-0 md:group-hover:opacity-100 transition-all duration-500 transform md:translate-y-4 md:group-hover:translate-y-0 text-white font-medium opacity-100 translate-y-0">
                   {service.desc}
                 </p>
               </div>
