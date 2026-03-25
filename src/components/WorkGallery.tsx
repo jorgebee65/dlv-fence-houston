@@ -100,6 +100,11 @@ export default function WorkGallery() {
                     muted
                     playsInline
                     className="object-cover w-full h-full grayscale-0"
+                    onError={(e) => {
+                      // Remove broken videos from view
+                      const target = e.currentTarget.parentElement;
+                      if (target) target.style.display = 'none';
+                    }}
                   />
                 ) : (
                   <Image
@@ -109,6 +114,11 @@ export default function WorkGallery() {
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="object-cover grayscale-0"
                     loading="lazy"
+                    onError={(e) => {
+                      // Remove broken images from view
+                      const target = e.currentTarget.parentElement;
+                      if (target) target.style.display = 'none';
+                    }}
                   />
                 )}
 
