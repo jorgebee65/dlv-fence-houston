@@ -1,3 +1,5 @@
+'use client';
+
 import { siteConfig } from '../data/site-config';
 
 export default function Navbar() {
@@ -5,14 +7,21 @@ export default function Navbar() {
     <nav className="fixed top-0 z-50 w-full bg-brand-black/95 backdrop-blur-md border-b-2 border-brand-steel transition-all duration-300">
       <div className="px-4 sm:px-8">
         <div className="flex justify-between items-center h-14 md:h-20">
-          <div className="flex-shrink-0 flex flex-col">
-            <span className="font-display text-xl sm:text-2xl md:text-5xl tracking-normal text-white uppercase leading-none">
-              DLV GATE <span className="text-brand-copper">MASTERS</span>
+          <a 
+            href="#" 
+            className="flex-shrink-0 flex flex-col group"
+            onClick={(e) => {
+              e.preventDefault();
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
+          >
+            <span className="font-display text-xl sm:text-2xl md:text-5xl tracking-normal text-white uppercase leading-none group-hover:text-brand-copper transition-colors">
+              DLV GATE <span className="text-brand-copper group-hover:text-white">MASTERS</span>
             </span>
-            <span className="font-body text-[7px] sm:text-[9px] md:text-xs text-brand-gray uppercase tracking-[0.2em] mt-1 md:mt-1.5 leading-none opacity-80">
+            <span className="font-body text-[7px] sm:text-[9px] md:text-xs text-brand-gray uppercase tracking-[0.2em] mt-1 md:mt-1.5 leading-none opacity-80 group-hover:opacity-100 transition-opacity">
               DLV Fence and Gate Masters LLC
             </span>
-          </div>
+          </a>
           <div className="flex items-center gap-4">
             <div className="hidden sm:flex flex-col items-end mr-4">
               <a href={`tel:${siteConfig.phones.english.value}`} className="font-display text-lg text-white hover:text-brand-amber leading-none mb-1">
