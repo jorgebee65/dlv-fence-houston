@@ -16,12 +16,12 @@ const manrope = Manrope({
 
 export const metadata: Metadata = {
   title: 'DLV Gate Masters | Custom Gates & Professional Fences in Houston',
-  description: 'Expert fabrication, professional installation, and reliable repairs in Houston. Specializing in LiftMaster™ automated systems, custom metal art, and heavy-duty privacy solutions built to last.',
+  description: 'DLV Fence and Gate Masters LLC: Expert fabrication, professional installation, and reliable repairs in Houston. Specializing in LiftMaster™ automated systems and custom metal art.',
   openGraph: {
     title: 'DLV Gate Masters | Custom Gates & Professional Fences in Houston',
-    description: 'Expert fabrication, professional installation, and reliable repairs in Houston. Specializing in LiftMaster™ automated systems, custom metal art, and heavy-duty privacy solutions built to last.',
+    description: 'DLV Fence and Gate Masters LLC: Expert fabrication, professional installation, and reliable repairs in Houston. Specializing in LiftMaster™ automated systems and custom metal art.',
     url: 'https://dlv-gate-masters.com',
-    siteName: 'DLV Gate Masters',
+    siteName: 'DLV Gate Masters LLC',
     images: [
       {
         url: '/og-image.webp',
