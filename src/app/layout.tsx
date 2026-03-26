@@ -17,6 +17,30 @@ const manrope = Manrope({
 export const metadata: Metadata = {
   title: 'DLV Gate Masters | Custom Gates & Professional Fences in Houston',
   description: 'DLV Fence and Gate Masters LLC: Expert fabrication, professional installation, and reliable repairs in Houston. Specializing in LiftMaster™ automated systems and custom metal art.',
+  keywords: [
+    'Gate installation Houston',
+    'Custom wrought iron gates',
+    'Fence repair Houston',
+    'LiftMaster gate operators',
+    'Commercial fencing Houston',
+    'Metal art fabrication',
+    'Driveway gates Texas',
+    'Residential security fences'
+  ],
+  alternates: {
+    canonical: 'https://dlv-gate-masters.com',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   openGraph: {
     title: 'DLV Gate Masters | Custom Gates & Professional Fences in Houston',
     description: 'DLV Fence and Gate Masters LLC: Expert fabrication, professional installation, and reliable repairs in Houston. Specializing in LiftMaster™ automated systems and custom metal art.',

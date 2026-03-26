@@ -18,12 +18,12 @@ export default function Hero() {
           
           <div className="flex flex-col lg:flex-row gap-12 lg:items-end justify-between reveal-3">
             <div className="space-y-8 max-w-3xl">
-              <p className="font-body text-brand-gray text-base sm:text-lg md:text-xl font-medium leading-relaxed">
+              <h2 className="font-body text-brand-gray text-base sm:text-lg md:text-xl font-medium leading-relaxed">
                 Houston’s premier metal experts for industrial-grade gates, custom art, and heavy-duty privacy. 
                 From professional repairs and precision installations to custom fabrication from scratch—we deliver 
                 elite craftsmanship across Houston and all surrounding areas. Built to outlast the Texas elements, 
                 designed to impress.
-              </p>
+              </h2>
               
               <div className="border-t border-brand-steel pt-8 space-y-8">
                 <div className="flex flex-col sm:flex-row sm:items-center gap-4">
