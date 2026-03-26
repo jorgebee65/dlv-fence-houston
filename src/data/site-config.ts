@@ -11,6 +11,10 @@ export const siteConfig = {
       label: "832-646-7417",
       value: "8326467417",
       whatsapp: "https://wa.me/18326467417"
+    },
+    office: {
+      label: "713-497-6168",
+      value: "7134976168"
     }
   },
   services: ["Iron", "Aluminum", "Sheet Metal", "Chainlink", "Custom"]

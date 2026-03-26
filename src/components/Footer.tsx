@@ -26,13 +26,18 @@ export default function Footer() {
               <h4 className="font-display text-brand-amber text-xl mb-4 tracking-wider uppercase">Contact</h4>
               <ul className="space-y-3">
                 <li>
-                  <a href={`tel:${siteConfig.phones.english.value}`} className="font-body text-white hover:text-brand-amber transition-colors">
-                    {siteConfig.phones.english.label} (English)
+                  <a href={`tel:${siteConfig.phones.office.value}`} className="font-body text-white hover:text-brand-amber transition-colors">
+                    Office: {siteConfig.phones.office.label}
                   </a>
                 </li>
                 <li>
-                  <a href={`tel:${siteConfig.phones.spanish.value}`} className="font-body text-white hover:text-brand-amber transition-colors">
-                    {siteConfig.phones.spanish.label} (Español)
+                  <a href={`tel:${siteConfig.phones.english.value}`} className="font-body text-white hover:text-brand-amber transition-colors text-sm">
+                    English: {siteConfig.phones.english.label}
+                  </a>
+                </li>
+                <li>
+                  <a href={`tel:${siteConfig.phones.spanish.value}`} className="font-body text-white hover:text-brand-amber transition-colors text-sm">
+                    Español: {siteConfig.phones.spanish.label}
                   </a>
                 </li>
               </ul>

@@ -25,24 +25,33 @@ export default function Hero() {
                 designed to impress.
               </p>
               
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 border-t border-brand-steel pt-8">
-                <div>
-                  <p className="font-display text-brand-amber text-lg mb-2 tracking-wider uppercase">English</p>
-                  <a href={`tel:${siteConfig.phones.english.value}`} className="font-display text-2xl md:text-4xl text-white hover:text-brand-amber block transition-colors leading-none">
-                    {siteConfig.phones.english.label}
-                  </a>
-                  <a href={siteConfig.phones.english.whatsapp} target="_blank" rel="noopener noreferrer" className="font-body text-xs text-brand-gray hover:text-white underline uppercase tracking-widest mt-3 block">
-                    WhatsApp Available
+              <div className="border-t border-brand-steel pt-8 space-y-8">
+                <div className="flex flex-col sm:flex-row sm:items-center gap-4">
+                  <p className="font-display text-brand-amber text-lg tracking-wider uppercase min-w-[120px]">Office Number:</p>
+                  <a href={`tel:${siteConfig.phones.office.value}`} className="font-display text-3xl md:text-5xl text-white hover:text-brand-amber transition-colors leading-none">
+                    {siteConfig.phones.office.label}
                   </a>
                 </div>
-                <div>
-                  <p className="font-display text-brand-amber text-lg mb-2 tracking-wider uppercase">Español</p>
-                  <a href={`tel:${siteConfig.phones.spanish.value}`} className="font-display text-2xl md:text-4xl text-white hover:text-brand-amber block transition-colors leading-none">
-                    {siteConfig.phones.spanish.label}
-                  </a>
-                  <a href={siteConfig.phones.spanish.whatsapp} target="_blank" rel="noopener noreferrer" className="font-body text-xs text-brand-gray hover:text-white underline uppercase tracking-widest mt-3 block">
-                    WhatsApp Disponible
-                  </a>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 pt-4">
+                  <div>
+                    <p className="font-display text-brand-amber text-lg mb-2 tracking-wider uppercase text-sm opacity-70">Direct English</p>
+                    <a href={`tel:${siteConfig.phones.english.value}`} className="font-display text-2xl md:text-3xl text-white hover:text-brand-amber block transition-colors leading-none">
+                      {siteConfig.phones.english.label}
+                    </a>
+                    <a href={siteConfig.phones.english.whatsapp} target="_blank" rel="noopener noreferrer" className="font-body text-[10px] text-brand-gray hover:text-white underline uppercase tracking-widest mt-3 block">
+                      WhatsApp Available
+                    </a>
+                  </div>
+                  <div>
+                    <p className="font-display text-brand-amber text-lg mb-2 tracking-wider uppercase text-sm opacity-70">Direct Español</p>
+                    <a href={`tel:${siteConfig.phones.spanish.value}`} className="font-display text-2xl md:text-3xl text-white hover:text-brand-amber block transition-colors leading-none">
+                      {siteConfig.phones.spanish.label}
+                    </a>
+                    <a href={siteConfig.phones.spanish.whatsapp} target="_blank" rel="noopener noreferrer" className="font-body text-[10px] text-brand-gray hover:text-white underline uppercase tracking-widest mt-3 block">
+                      WhatsApp Disponible
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
